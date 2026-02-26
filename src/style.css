@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Roboto, sans-serif;
   font-weight: 500;
@@ -8,10 +14,9 @@ body {
 header {
   width: 100%;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 0 50px;
   display: flex;
   align-items: center;
-  padding-left: 50px;
   position: relative;
 }
 
@@ -28,8 +33,6 @@ header {
 }
 
 .logo {
-  left: 50px;
-  top: 10px;
   width: 40px;
   height: 40px;
 }
@@ -40,18 +43,15 @@ header {
   padding: 0;
   display: flex;
   align-items: center;
+  gap: 20px;
 }
 
-.nav__list li {
-  margin-right: 28px;
-}
-
-.nav__list li:last-child {
+.nav__link li:last-child {
   margin-right: 0;
 }
 
 .nav__list a {
-  height: 45px;
+  height: 60px;
   display: flex;
   align-items: center;
   position: relative;
@@ -75,12 +75,11 @@ header {
 
 .header__link.is-active::after {
   content: '';
-  position: relative;
+  position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   height: 4px;
-  background-color: #00acdc;
+  background-color: var(--blue);
   border-radius: 2px;
-  text-decoration: underline;
 }
